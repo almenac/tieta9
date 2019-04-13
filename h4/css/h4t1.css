@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* body {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+} */
+
+.container {    
+    height: 100%;
+    display: grid;
+    grid-template: 49.5vh 49.5vh / 1fr 1fr;                        
+}
+
+.grid-item {
+    border: 4px solid green;
+}

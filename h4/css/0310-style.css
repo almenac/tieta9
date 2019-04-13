@@ -1,0 +1,109 @@
+
+.container {
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+/*  border: 5px solid #96aaeb;
+/*  display: flex;                                      
+   
+/* 1 - - - - - - - - - - - -                                */
+/*   flex-direction: row-reverse;                           */
+/*   flex-direction: column;                                */
+
+/* 2 - - - - - - - - - - - -  Asettelu main-axis suunnassa  */
+/*   justify-content: flex-start;                           */
+/*   justify-content: flex-end;                             */
+/*   justify-content: center;                               */
+/*   justify-content: space-around;                         */
+/*   justify-content: space-between;                        */
+
+/* 3- - - - - - - - Asettelu cross-axis suunnassa.          
+                    Jotta toimisi korkeuden tulee  olla     
+                    maariteltyna. Muista, etta myos vanhem-  
+                    malla tulee olla korkeus määriteltynä   */
+/*   height: 100%;  /*  jotta suhteellisella korkeudella    */
+                    /*  olisi merkistyistä                  */                      
+/* 3                                                        */
+/*   align-items: center;                                   */
+/*   align-items: flex-end;                                 */
+/*   align-items: flex-start;                               */
+ 
+/* 4 - - - - - - - - Jos flex-item -elementit eivat mahdu   
+                     riville, voidaan  maaritella, etta ne  
+                     siirtyvat uudelle riville. Annetaan    
+                     flex-itemeille mitta main-axis         
+                     suunnassa (200 px alla)                */
+/*   flex-wrap: wrap;                                       */
+/*  - - - - - - - - - - - - - - - - - - - - - - - - - - - - */ 
+}
+
+
+/* 4                                                        */
+/*    .container > div {
+      width: 200px;
+    }                                                       */
+
+/* 5 - - - - - - - - Oletuksena kaikki flex-itemit jakavat  */
+/*                    annetun tilan, mutta jos annetaan     */
+/*                    yhdelle flex-itemille flex-arvo, vain */
+/*                    sen main-axis koko mukautuu, muut     */
+/*                    pysyvat siina koossa, jonka niiden    */
+/*                    sisalto niille maaraa (muilla silloin */
+/*                    flex-grow arvona 0) */
+
+/*    .container > div:nth-child(2){                        
+          flex:1;                                              
+      }                                                     */ 
+
+/* 6  - - - - - - - - Antamalla kaikkien flex-itemien flex  */
+/*                   -ominaisuudelle kokonaislukuarvo       */
+/*                   saadaan maaritellyksi se suhde, missa  */
+/*                   flex-container -elementin              */
+/*                   lisatila allokoidaan lapsille          */
+/*     .container > div:nth-child(1){                     
+        flex:1;
+     }                                                      */
+/*     .container > div:nth-child(2){
+       flex: 2;
+     }                                                      */
+/*    .container > div:nth-child(3){
+       flex:3;
+     }                                                      */
+      
+/* 7 - - - - - - -  flex-basis-ominaisuudella voidaan antaa  
+                    flex-itemille main-axis suunnan koolle 
+                    alkuarvo, joka patee, jos flex-container 
+                    on tarpeeksi suuri, mutta flex-item ei 
+                    kasva kokoaan isommaksi, ellei maariteta  
+                    arvoa ominaisuudelle flex-grow         */
+/*      .container > div {
+         flex-basis: 200px;
+      }                                                    */
+
+/* 8 - - - - - - -   Jos annetaan flex-item elementtien 
+                     ominaisuudelle flex-grow:lle ja 
+                     flex-shrinkille arvot, ne maarittavat 
+                     sen suhteen, missa flex-item elementeille
+                     annetaan kasvatettavaa tilaa ja missä 
+                     suhteessa niilta otetaan puuttuvaa tilaa. 
+                     Ts. sen "nopeuden" jolla ne kasvavat ja 
+                     pienentyvat kun eivat mahdu flex-containeriin
+                     flex-basis arvon maaraamassa koossa.
+                     Seuraavassa siis viimeinen elementti 
+                     kasvaa koosta 200px nopeiten, mutta
+                     myos pienenee nopeiten, kun flex-container 
+                     on pienempi kuin 600px             */
+/*   .container > div {
+        flex-basis: 200px;
+      }
+    .container > div:nth-child(1){
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+     .container > div:nth-child(2){
+        flex-grow: 3;
+        flex-shrink: 3;
+     }
+    .container > div:nth-child(3){
+        flex-grow: 6;
+        flex-shrink: 6;
+     }     
+}                                                         */
