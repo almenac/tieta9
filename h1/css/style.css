@@ -1,0 +1,18 @@
+/* Tyylipohjatiedosto */
+body {
+    max-width: 600px; /* sivun sisallon leveys 600px */
+    margin: auto;     /* molemmin puolin jaava tyhja tila samanlevyinen */
+    background-color: beige; /* annetaan sivulle taustavari */
+    /* font-family: 'Lucida Sans', 'Verdana', 'sans-serif'; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+/* kakkostason otsikoiden fonttien koot verrattun perusfonttikokoon 1em */
+h2 {  
+    font-size: 1.1em;
+}
+
+img {
+    float: right;
+}

@@ -1,0 +1,37 @@
+body {
+    text-align: center;    
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border: none;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(203, 153, 206);
+}
+
+tr:nth-child(1) {
+    background-color: purple;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+nav {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 50%;
+    background-color: rgb(203, 153, 206);
+    margin: auto;
+}
+
+nav a {
+    font-size: 1.5em;
+    background-color: purple;
+    border-radius: 0.2em;
+}
+
+a:link { color: #000000; text-decoration: none}
+a:visited { color: #000000; text-decoration: none}

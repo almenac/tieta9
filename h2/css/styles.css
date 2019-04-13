@@ -1,0 +1,59 @@
+p:nth-of-type(2) {
+    color: darkviolet;            
+}
+
+a:nth-child(-n+1){
+    color: gold;
+}
+
+section:first-of-type .a.b {
+    color: aqua;
+}
+
+section:first-of-type .a.b span{
+    color: brown;
+}
+
+section:last-of-type .a.b {
+    color: yellow;    
+}
+
+section:last-of-type .a.b span{
+    color: pink;
+}
+
+div {
+    color: chocolate;
+}        
+
+.a.c > li:nth-child(1) {
+    color: darkblue;
+}
+
+.a.c > li:nth-child(2) {
+    color: lime;
+}
+
+.c {
+    color: hotpink;
+}
+
+#a {
+    color: forestgreen;
+}
+
+.c > li:nth-child(2){
+    color: lime;
+}
+
+.c.b > li {
+    color:royalblue;
+}
+
+.c.b > .a {
+    color: olive;
+}
+
+.c.b > li:nth-child(3) {
+    color: lime;
+}

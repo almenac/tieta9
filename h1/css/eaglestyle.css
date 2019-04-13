@@ -1,0 +1,14 @@
+/* Tyylipohjatiedosto */
+body {
+    max-width: 800px;    
+    background-color: lightcyan; /* annetaan sivulle taustavari */    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.floater {
+    float: left;
+}
+
+
+
