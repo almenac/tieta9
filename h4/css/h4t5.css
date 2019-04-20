@@ -1,0 +1,58 @@
+body {
+    text-align: center;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.1em;    
+}
+
+#jim {
+    max-width: 100%;
+    display: block;
+    margin:auto;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: rgb(103, 145, 145);
+}
+
+.grid-item {
+    width: 200px;
+    width: 200px;
+    display: inline-block;
+    border-radius: 0 1.5em 1.5em 0;
+}
+
+.k {
+    border: dotted white 2px;
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+    text-align: center;
+}
+
+.k p {
+    text-align: left;
+    float: left;
+    padding: 6px;
+    width: 50%;
+    border-right: dotted white 2px;
+}
+
+.k div, .k summary{
+    text-align: left;
+}
+
+.k img {
+    float: left;
+    padding: 6px;
+    width: 50%;
+    border-right: dotted white 2px;
+}

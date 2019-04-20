@@ -4,18 +4,23 @@
     padding: 0px;
 }
 
-/* body {
+body {
     height: 100%;
 }
 
 html {
     height: 100%;
-} */
+}
+
+div {
+    font-size: 2em;
+}
 
 .container {    
     height: 100%;
     display: grid;
-    grid-template: 49.5vh 49.5vh / 1fr 1fr;                        
+    grid-template: 1fr 1fr / 1fr 1fr;                        
+    /* grid-template: 49.5vh 49.5vh / 1fr 1fr;                         */
 }
 
 .grid-item {

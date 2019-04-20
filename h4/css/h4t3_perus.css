@@ -1,0 +1,40 @@
+* {                          
+    box-sizing: border-box;  /* kaytetaan laatikkomallin uutta tulkintaa ja  */
+    margin: 0;               /* poistetaan kaikilta elementeilta selaimen    */
+    padding: 0;              /* oletusmarginaalit ja taytot                  */ 
+}
+
+ html, body {         /* suhteellisella mitalla annetaan root-elementin kook-*/
+    font-size: 62.5%; /* si 10px, josta helppo antaa muille koot kayttaen    */
+    height: 100%;     /* rem-yksikkoa. Annetaan juurielementille korkeus jot-*/
+ }                    /* ta myohemmin voidaan viitata vanhemman korkeuteen   */
+
+.item {              /* luokka kaikilla conteinerin lapsilla                 */
+  border: 3px solid #ff9969;
+  color: #ff9969;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  
+  text-align: center;  
+  /* font on lyhenne, johon voi kirjoittaa useamman omi- */
+  font: bolder 2.2rem Arial, Helvetica, sans-serif; /* naisuuden kerralla,   */
+}                    /* tassa jarjestyksessa: 
+                     /* font-style,font-variant, font--weight,font-size,     */
+                     /* font-family.                                         */
+                     /* Yksi tai useampi naista voi puuttua, lukuunottamatta */
+                     /* pakollisia font-size ja font-family ominaisuuksia,   */
+                     /* jarjestyksen tulee joka tapauksessa sailya)          */
+
+
+.container p, footer.item {
+    font: normal 1.4rem Arial, Helvetica, sans-serif; 
+    color: black;
+    margin: 5px;
+}
+
+.container p {
+    text-align: left;
+}
+
+
