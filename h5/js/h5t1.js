@@ -22,20 +22,31 @@ button2.addEventListener("click", event => {
         let resDisplay = document.getElementById("result2");
         resDisplay.innerHTML = result;
     }
-})
+});
+
+
 
 // Full calculator
 
 let calcButtons = document.querySelectorAll("td > button");
 let calcDisplay = document.querySelector("#calcDisplay");
-resString = "Alkuarvo";
-calcDisplay.value = resString;
+resString = "";
 
-for(let i = 0; i < calcButtons.length; i++) {    
+for(let i = 0; i < calcButtons.length; i++) {
     calcButtons[i].style.color = "blue";
-    calcButtons[i].addEventListener("click", event => {
-        calcDisplay.value = calcButtons[i].value;
+    
+    calcButtons[i].addEventListener("click", event => {        
+        if (calcButtons[i].value === "=") {
+            calc(resString);
+        }
+        addToDisplay(calcButtons[i].value);        
     })
+}
+
+// Add to display function
+function addToDisplay (value) {
+    resString += value;
+    calcDisplay.value = resString;
 }
 
 // Calculate function for multiple operands
