@@ -1,0 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+    font-size: 100%; 
+	background-color: black;
+} 
+
+#kauppalista{
+	background: LightYellow;
+	border-radius: 2em;
+	margin: 1em auto 1em auto;
+	width: 360px;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.rivi {
+  width: 70%;
+  background-color:  #ffee77;
+  border-radius: 0.3em;
+  border: 2px solid #bbc5c5;
+  margin: auto;
+  padding: 0.3em 1em 0.3em ;
+  /* estetään tekstin valinta listan riveiltä        */
+  user-select: none;
+}
+
+
+/*  värikoodit listarivien luokille */
+li.rivi.normaali {	background-color: #ffee77; } 
+li.rivi.huomio { background-color: #f08080;} 
+li.rivi.poistettava { 
+	background-color: #bbc5c5;
+	/* paitsi väri, tuodaan pieni roskiskuvake   */
+	/* taustaan, oikeaan laitaan kertomaan, että */
+	/* listarivin voi poistaa                    */
+	background-image:  url(../img/roskis.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+#syote {
+	padding: 15px 0;
+  user-select: none;
+}
+#syote .rivi {
+  display: block;
+  background-color:  white;
+ }
+
+
+footer {
+	border-top: medium dotted rgb(185,185,185);
+	color: white;
+	font-size: small;
+	text-align: center;
+}
+

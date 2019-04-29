@@ -9,9 +9,9 @@ button1.addEventListener("click", event => {
     let resDisplay = document.getElementById("result1");
     
     if (!num1 && !num2) {
-        resDisplay.innerHTML = "Enter numbers to both fields."
+        resDisplay.innerHTML = "Anna molempiin kenttiin luvut."
     } else if (!num1 || !num2) {    
-        resDisplay.innerHTML = "Enter number to the other field."
+        resDisplay.innerHTML = "Anna toiseenkin kenttään luku."
     } else if (num1 && num2) {    
         let result = calc(num1, num2, operand);
         resDisplay.innerHTML = result;
@@ -26,9 +26,9 @@ button2.addEventListener("click", event => {
     let resDisplay = document.getElementById("result2");
     
     if (!num1 && !num2) {
-        resDisplay.innerHTML = "Enter numbers to both fields."
+        resDisplay.innerHTML = "Anna molempiin kenttiin luvut."
     } else if (!num1 || !num2) {    
-        resDisplay.innerHTML = "Enter number to the other field."
+        resDisplay.innerHTML = "Anna toiseenkin kenttään luku."
     } else if (num1 && num2) {    
         let result = calc(num1, num2, operand);
         resDisplay.innerHTML = result;
