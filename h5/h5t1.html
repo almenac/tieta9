@@ -11,11 +11,65 @@
     <p>Anna kaksi lukua</p>
     <div>
         <label for="field1">Luku 1:</label>
-        <input id="field1" type="number">
+        <input id="field1" type="number" pattern=[^\d+$]>
         <label for="field2">Luku 2:</label>
         <input id="field2" type="number">
-        <button>=</button>
-        <span id="result"></span>
+        <button id="button1">=</button>
+        <span id="result1"></span>
+    </div>
+    <div>
+        <label for="field3">Luku 1:</label>
+        <input id="field3" type="number">
+        <select name="operand" id="operand">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+            <option value="==">==</option>
+            <option value="===">===</option>
+        </select>
+        <label for="field4">Luku 2:</label>
+        <input id="field4" type="number">
+        <button id="button2">=</button>
+        <span id="result2"></span>
+    </div>
+    <br>
+    <div>   
+        <input id="field4" type="number">
+        <table>
+
+            <tr>                
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+            </tr>
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+            </tr>
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+            </tr>
+            <tr>
+                <td><button>+</button></td>
+                <td><button>0</button></td>
+                <td><button>-</button></td>
+            </tr>
+            <tr>
+                <td><button>*</button></td>
+                <td><button>/</button></td>
+                <td><button>%</button></td>
+            </tr>
+            <tr>
+                <td><button>Clear</button></td>                
+                <td><button>=</button></td>                
+            </tr>
+        </table>
+                
     </div>    
     <script src="js/h5t1.js"></script>
 </body>
