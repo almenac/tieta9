@@ -1,6 +1,8 @@
 const button1 = document.getElementById('button1')
 const button2 = document.getElementById('button2')
 
+// Input field add
+
 button1.addEventListener("click", event => {
     let num1 = document.getElementById("field1").value;
     let num2 = document.getElementById("field2").value;
@@ -8,6 +10,8 @@ button1.addEventListener("click", event => {
     let resDisplay = document.getElementById("result1");
     resDisplay.innerHTML = result;
 })
+
+// Input field simple calc
 
 button2.addEventListener("click", event => {
     let num1 = document.getElementById("field3").value;
@@ -20,6 +24,20 @@ button2.addEventListener("click", event => {
     }
 })
 
+// Full calculator
+
+let calcButtons = document.querySelectorAll("td > button");
+let calcDisplay = document.querySelector("#calcDisplay");
+resString = "Alkuarvo";
+calcDisplay.value = resString;
+
+for(let i = 0; i < calcButtons.length; i++) {    
+    calcButtons[i].style.color = "blue";
+    calcButtons[i].addEventListener("click", event => {
+        calcDisplay.value = calcButtons[i].value;
+    })
+}
+
 // Calculate function for multiple operands
 function calc (value1, value2, op) {    
     let result = Number(eval(value1 + op + value2));
@@ -29,8 +47,8 @@ function calc (value1, value2, op) {
     return result.toFixed(2);    
 }
 
-/**
- * Input-fieldi stringinä
- * html collection ja for loop joka napille
- * 
- */
+
+
+
+
+
