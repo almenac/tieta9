@@ -1,0 +1,27 @@
+.jumbotron img {
+    width: 100%;
+}
+
+#visa .card {
+    min-width: 540px;
+}
+
+.card img {
+    width: auto;
+}
+
+.piilota {
+    display: none;
+}
+
+.vaarin:first-child { 
+    color: rgb(133, 7, 7); 
+}
+
+.oikein:first-child{
+    color: rgb(6, 88, 6);
+}
+
+button {
+    float: right;
+}

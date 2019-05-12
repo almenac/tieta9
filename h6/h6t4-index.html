@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aulikki Hyrskykari">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>h6t4: Visa</title>
+    <link rel="icon" href="http://www.sis.uta.fi/~ah/share/ah.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <header class="jumbotron  text-center">
+            <h1>Musiikkivisa: Miten taittuu webbaajalta rock'n roll? </h1>
+            <img class="jumbotron-fluid" src="img/morrison-banner.jpg"
+                alt="Rikosrekisterikuvia jäljittelevät profiili ja kasvokuvat Jim Morrisonista">
+            <h2>Tervetuloa testaamaan tietojasi pop- ja rockvisaan!</h2>
+        </header>
+
+        <div id="visa" class="row">
+
+            <!-- seuraava vain malli tueksi js-koodin kirjoitukseen: 
+                 muodostetaan kysymykset tämän mallin mukaan kun muodostetaan
+                 kysymystä i (i = 0, 1, .. kysymysten lukumäärä) ja 
+                 {xxx}-kohtiin tulee liittää json-tiedostosta noudettu tieto
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >
+            <div class="col-xl-6">
+                <div id = kortti{i] class="card m-4 border-dark flex-row">
+                    
+                    <img src="{kysymys[i].image}" class="card-img-bottom"
+                         alt="{kysymys[i].imageAlt}">
+                    <div class="lisa-info alert m-0 p-4 alert-dark">
+                        {kysymys[i].additional-info}
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="kysymys card-title">{kysymys[i].question}</h5>
+                        <p class="card-text">
+
+                            <div class="vaihtoehdot card-text">
+                                <input type="radio" name="q{i}"" value="0"><br>
+                                <input type="radio" name="q{i}" value="1"><br>
+                                <input type="radio" name="q{i}" value="2"><br>
+                                <input type="radio" name="q{i}" value="3"><br>
+                            </div>
+
+                            <div class="vastaus oikein piilota card-text">
+                                <strong>Oikein!</strong><br> 
+                                <strong>{kysymys[i].answer[kysymys.rightAnswerId]}</strong>: 
+                                <em>{kysymys[i].answerText}</em>
+                            </div>
+                            <button>Oliko oikein?</button>
+                    </div>
+                </div>
+            </div>
+                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+        </div>
+        <footer class="text-center mx-auto">
+            <!-- ============================================ FOOTER -->
+            <div>
+                <a href="https://validator.w3.org/check/referer">
+                    <img style="border:0; height:31px" src="https://www.w3.org/QA/Tools/I_heart_validator_lg"
+                        alt="Valid HTML!" /></a>
+
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0; height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="Valid CSS!" /></a>
+            </div>
+        </footer>
+        <!-- Bootstrap JavaScript: Boostrap contains also functionality, not only styles.  -->
+        <!-- Lets use CDN to get the js-code needed for bootstrap to function -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    </div>
+    <script src="js/h6t4.js"></script>
+</body>
+
+</html>

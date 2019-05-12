@@ -1,0 +1,82 @@
+{
+    "title":"",
+    "mainImage":"",
+    "mainImageAlt": "",
+    "subTitle":"",
+    "questions": [
+           {
+               "question":"Mistä maasta laulaja lauluntekijä Sia Furler on kotoisin?",
+               "image":"",
+               "imageAlt":"",
+               "additionalInfo": "Hänen suosionsa on kasvanut tasaisesti vimeisten vuosien ajan. Hänen kappaleistaan on tullut megahittejä sekä hänen itsensä, että muiden esittämänä.",
+               "answers":
+               [
+                "Australiasta",
+                "Irlannista",
+                "Norjasta",
+                "Chilestä"
+               ],
+               "rightAnswerId": 0,
+               "answerExplanation": "Sia Furler on australialainen. Hän aloitti uransa 1997, mutta hänen läpimurtonsa tapahtui 2014 kappaleella \"Chandelier\"."
+           },
+           {
+               "question":"Kenen naislaulajan läpimurtosingle noin 10 vuotta sitten oli \"Just Dance\"?",
+               "image":"",
+               "imageAlt":"",
+               "additionalInfo": "",
+               "answers":
+               [
+                "Ke$ha",
+                "Alicia Keys",
+                "Lady Gaga",
+                "Colbie Caillat"
+               ],
+               "rightAnswerId":2,
+               "answerExplanation":"Lady Gaga (alias Stefani Germanotta) julkaisi debyyttisinglen \"Just Dance\" jo huhtikuussa 2008, mutta sen suosio kasvoi vähitellen ja vuoden 2009 alussa se nousi listoille useissa maissa. \"Poker Face\" samalta albumilta, oli eniten myyty single maailmassa vuonna 2009."
+           },
+           {
+               "question":"Kuka on kuvan laulaja? \"Wrecking Ball\" on yksi hänen suurimmista hiteistään?",
+               "image":"mc.png",
+               "imageAlt":"Valokuva naisesta, joka näyttää kieltään",
+               "additionalInfo": "",
+               "answers":
+               [
+                   "Charli XCX", 
+                   "Ellie Goulding", 
+                   "Miley Cyrus", 
+                   "Taylor Swift" 
+               ],
+               "rightAnswerId":2,
+               "answerExplanation":"Hän tuli tunnetuksi vuonna 2006 tv-sarjasta \"Hannah Montana\". Vuonna 2008 hän julkaisi ensimmäisen soololevynsä. Hän on tehnyt kielestään tuotemerkkinsä ja hänen väitetään vakuuttaneen kielensä miljoonasta dollarista, kielensä."
+           },
+           {
+               "question":"Sitten toiseen kielimerkkiin. Miksi Rolling Stones -kitaristia Keith Richardsia on kutsuttu?",
+               "image":"rollingstones.png",
+               "imageAlt":"Rolling Stones -yhtyeen kielilogo",
+               "additionalInfo": "",
+               "answers":
+               [
+                   "The Human Sniff", 
+                   "The Human Whiff", 
+                   "The Human Spiff", 
+                   "The Human Riff" 
+               ],
+               "rightAnswerId":3,
+               "answerExplanation":"Keith Richrardsin tunnistettavat kitarariffit ovat antaneet hänelle lempinimen \"Human Riff\", joka oli myös hänestä kertovan dokumenttielokuvan nimi."
+           },
+           {
+               "question":"Missä legendaarisessa 1960-luvun yhtyeessa Jim Morrison (ks. visan otsikkokuva)?", 
+               "image":"",
+               "imageAlt":"",
+               "additionalInfo": "",
+               "answers":
+               [
+                   "The Yardbirds", 
+                   "The Doors", 
+                   "The Band", 
+                   "The Byrds" 
+               ],
+               "rightAnswerId":1,
+               "answerExplanation":"Jim Morrison perusti The Doorsin Los Angelesissa 1965 yhdessä kosketinsoittaja Ray Manxarekin, kitaristi Robby Kriegerin ja rumpali John Densmoren kanssa. Yhtyeen tunnetuimpia kappaleita ovat mm. \"Break On Through (The Other Side)\", \"Light My Fire\" ja \"Riders on the Storm\". Jim Morrison kuoli 27 vuotiaana 1971."
+           }
+       ]}
