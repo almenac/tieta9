@@ -1,89 +1,87 @@
-"use strict"
+// Div container in html
+const container = document.querySelector("#container");
+// Restcountries data source
+const dataSource = "https://restcountries.eu/rest/v2/all";
 
-// Parent div element    
-let container = document.querySelector("#container");
-// Data source
-let dataSource = "https://restcountries.eu/rest/v2/all";
-
-fetch(dataSource)
-    // Error if data missing
-    .then (function(response) {
-        if (response.status !== 200) {
-            console.log("Data not found! Code: " + response.status);
-            return;
-        }
-        return response.json();
-    })
-    .then(function(data) {        
-        // Countries with at least two border countries
-        let validCountries = _.filter(data, function(country){ return country.borders.length >= 2; });
-        // Save three random countries
-        let startingCountries = _.sample(validCountries, 3);    
-        // Find the data of starting countries        
-        for (let i = 0; i < startingCountries.length; i++) {        
-            buildCountry(startingCountries[i]);
-            //console.log(startingCountries[i].name.toString());        
-        };        
-    })
-    // Error handling
-    .catch(function(err) {
-        console.log('Fetch catch clause', err);    
+// Get data and handle it
+fetch(dataSource)    
+// Error if data not found in source
+.then (function(response) {
+    if (response.status !== 200) {
+        console.log("Data not found! Code: " + response.status);
+        return;
+    }
+    return response.json();
+})
+// Data handling
+.then(function(data) {        
+    // Limit countries to those with at least two border countries
+    const validCountries = data.filter(country => country.borders.length > 1);
+    // Take three random countries from valid country list
+    let startingCountries = _.sample(validCountries, 3);    
+    // Make a temporary document fragment to contain all data to be inserted simultaneusly    
+    const frag = document.createDocumentFragment();
+    // Loop through starting countries
+    startingCountries.forEach(country => {
+        // Build country with buildCountryElement function and append to fragment        
+        frag.append(buildCountryElement(country));
     });
-// Build country data in a div
-function buildCountry (country) {
-    // Country container
-    let countryDiv = document.createElement("div");    
-    
-    // ADD COUNTRY DATA
-    // Flag
-    let flagDiv = document.createElement("div");
-    let flagImg = document.createElement("img");
-    flagImg.setAttribute("src", country.flag);
-    flagImg.setAttribute("width", "150");
-    flagDiv.appendChild(flagImg);
-    // Name and capital
-    let nameDiv = document.createElement("div");    
-    let nameSpan = document.createElement("span");            
-    let capSpan = document.createElement("span");            
-    nameSpan.innerHTML = "<strong>" + country.name.toString() + "</strong>:<br>"
-    capSpan.innerHTML = country.capital.toString() + "<br><br>";    
-    nameDiv.appendChild(nameSpan);   
-    nameDiv.appendChild(capSpan);
-    // Currency
-    let curDiv = document.createElement("div");    
-    let curHead = document.createElement("span");
-    let curLongSpan = document.createElement("span");            
-    let curShortSpan = document.createElement("span");            
-    curHead.innerHTML = "<strong>Currency:</strong><br>"
-    curLongSpan.innerHTML = country.currencies[0].name.toString();
-    curShortSpan.innerHTML = " [" + country.currencies[0].code.toString() + "]<br><br>";
-    curDiv.appendChild(curHead);
-    curDiv.appendChild(curLongSpan);
-    curDiv.appendChild(curShortSpan);
-    // Border countries
-    let borDiv = document.createElement("div");    
-    let borHead = document.createElement("span");
-    let borListSpan = document.createElement("span");                
-    borHead.innerHTML = "<strong>Borders:</strong><br>";
-    let borderString = "";
-    for (let i = 0; i < country.borders.length; i++) {
-        if (i == country.borders.length -1) {
-            borderString += country.borders[i] + ".";    
-        }
-        else {
-            borderString += country.borders[i] + ", ";
-        }
+    // Append the fragment to container div with one go
+    container.appendChild(frag);    
+})
+// Error handling
+.catch(function(err) {
+    console.log("Fetch catch clause", err);    
+});
 
-    };
-    borListSpan.innerHTML = borderString + "<br><br>";
-    borDiv.appendChild(borHead);
-    borDiv.appendChild(borListSpan);    
-
-    // Push elements to country div
-    countryDiv.appendChild(flagDiv);    
-    countryDiv.appendChild(nameDiv);
-    countryDiv.appendChild(curDiv);
-    countryDiv.appendChild(borDiv);
-    // Push country div to container
-    container.appendChild(countryDiv);  
+// Build the country DOM element
+function buildCountryElement(country){
+	// Div to house country data
+    const container = document.createElement("div");
+    // Append image with separate function and flag data from country data
+    container.appendChild( createImgElement(country.flag) );
+    // Append name data, currency and borders with corresponding data as arguments
+    container.appendChild( createDataElement(country.name + ":", country.capital) );
+    container.appendChild( createDataElement("Currency:", country.currencies[0].name + " (" + country.currencies[0].code + ")") );
+    container.appendChild( createDataElement("Borders:", country.borders.join(", ") + ".") );
+    return container;
 }
+
+// Helper function to create image element inside a div
+function createImgElement(src){
+    // Container div for the flag image
+    const container = document.createElement('div');
+    // Create image element
+    const img = document.createElement('img');
+    // Set image source attribute to match address in argument
+    img.src = src;
+    // Resize the image to fit to screen better
+    img.style.width = '200px';
+    // Append img element to container div
+    container.appendChild(img);
+    // Return container div
+    return container;
+}
+
+// Helper function to create data element inside a div
+function createDataElement(boldText, notBoldText){
+    // Container div for the data
+    const container = document.createElement('div');
+    // Container for bolded text
+    const strong = document.createElement('div');
+    // Container for the other text
+    const weak = document.createElement('div');
+    // Add info class to data container for bottom margin
+    container.classList.add('info');
+    // Add head class to strong div to bold text
+    strong.classList.add('head');
+    // Add both elements to container div
+    container.appendChild(strong);
+    container.appendChild(weak);
+    // Place argument text to right elements
+    strong.textContent = boldText;
+    weak.textContent = notBoldText;
+    // Return container div
+    return container;
+}
+
